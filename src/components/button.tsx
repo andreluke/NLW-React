@@ -1,6 +1,4 @@
-import type { ComponentProps } from 'react'
-
-interface ButtonProps extends ComponentProps<'button'> {}
+import type { ButtonProps } from '@/types'
 
 export function Button(props: ButtonProps) {
   return (

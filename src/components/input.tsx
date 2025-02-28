@@ -1,12 +1,4 @@
-import type { ComponentProps } from 'react'
-
-interface InputRootProps extends ComponentProps<'div'> {
-  error?: boolean
-}
-
-interface InputIconProps extends ComponentProps<'span'> {}
-
-interface InputFieldProps extends ComponentProps<'input'> {}
+import type { InputFieldProps, InputIconProps, InputRootProps } from '@/types'
 
 export function InputRoot({ error = false, ...props }: InputRootProps) {
   return (
