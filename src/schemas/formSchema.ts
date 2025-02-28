@@ -5,4 +5,4 @@ export const submissionSchema = z.object({
   email: z.string().email('Digite um e-mail válido'),
 })
 
-export type SubmissionTypeSchema = z.infer<typeof submissionSchema>
+export type SubmissionSchema = z.infer<typeof submissionSchema>
