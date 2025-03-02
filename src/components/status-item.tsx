@@ -1,5 +1,4 @@
 import type { StatusComponentProps } from '@/types'
-import React from 'react'
 
 export function StatusItem({
   icon: Icon,
