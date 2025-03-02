@@ -5,13 +5,32 @@ import type {
   RefAttributes,
 } from 'react'
 
-interface StatusProps extends ComponentProps<'div'> {
+interface StatusComponentProps extends ComponentProps<'div'> {
   label: string
-  stats: string
+  stats: number | string
   icon: ForwardRefExoticComponent<
     Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
   >
   position?: boolean
 }
 
-export type { StatusProps }
+interface StatusData {
+  label: string
+  stats: number | string
+  icon: ForwardRefExoticComponent<
+    Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
+  >
+  position?: boolean
+}
+
+interface StatusDataProps {
+  accessCount: number
+  inviteCount: number
+  rankingPosition: number | null
+}
+
+interface StatusProps {
+  subscriberId: string
+}
+
+export type { StatusProps, StatusComponentProps, StatusData, StatusDataProps }

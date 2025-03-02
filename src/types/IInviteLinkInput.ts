@@ -1,3 +1,5 @@
-export interface InviteLinkInputProps {
+interface InviteLinkInputProps {
   inviteLink: string
 }
+
+export type { InviteLinkInputProps }

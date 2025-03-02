@@ -1,10 +1,11 @@
-import { positionRanking, rankingMedals, translateMedal } from '@/constants'
+import { positionRanking, rankingMedals, translateMedal } from '@/tools'
 import type { IRanking } from '@/types'
 import Image from 'next/image'
 
 export function RankingItem({ medal, name, score, ...props }: IRanking) {
   return (
     <div
+      key={props.key}
       className="relative rounded-xl bg-gray-700 border border-gray-600 p-6 flex flex-col justify-between gap-3"
       {...props}
     >

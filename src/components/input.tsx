@@ -20,5 +20,10 @@ export function InputIcon(props: InputIconProps) {
 }
 
 export function InputField(props: InputFieldProps) {
-  return <input className="flex-1 outline-0 placeholder-gray-400" {...props} />
+  return (
+    <input
+      className="flex-1 outline-0 placeholder-gray-400 w-full"
+      {...props}
+    />
+  )
 }
