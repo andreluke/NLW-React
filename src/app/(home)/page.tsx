@@ -1,6 +1,8 @@
 import logo from '@/assets/logo.svg'
+import { LoadingIndicator } from '@/components'
 import { Radio } from 'lucide-react'
 import Image from 'next/image'
+import { Suspense } from 'react'
 import { SubscriptionForm } from './subscription-form'
 
 export default function Home() {
@@ -34,7 +36,9 @@ export default function Home() {
             Dias 15 e 17 de março | Das 18h às 21h | Online e gratuito
           </p>
         </div>
-        <SubscriptionForm />
+        <Suspense fallback={<LoadingIndicator />}>
+          <SubscriptionForm />
+        </Suspense>
       </div>
     </div>
   )
