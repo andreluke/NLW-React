@@ -1,28 +1,14 @@
+import { SubscriberStats } from '@/class'
 import { StatusItem } from '@/components'
-import { createStatusData } from '@/data/statusData'
-import {
-  getSubscriberInviteClicks,
-  getSubscriberInviteCount,
-  getSubscriberRankingPosition,
-} from '@/http/api'
-import type { StatusData, StatusProps } from '@/types'
+import { fetchSubscriberStats } from '@/functions'
+import type { StatusProps } from '@/types'
 
 export async function Status({ subscriberId }: StatusProps) {
-  const [
-    { count: accessCount },
-    { count: inviteCount },
-    { position: rankingPosition },
-  ] = await Promise.all([
-    getSubscriberInviteClicks(subscriberId),
-    getSubscriberInviteCount(subscriberId),
-    getSubscriberRankingPosition(subscriberId),
-  ])
-
-  const statsData: StatusData[] = createStatusData({
-    accessCount: accessCount,
-    inviteCount: inviteCount,
-    rankingPosition: rankingPosition,
-  })
+  const subscriberStats = new SubscriberStats(
+    subscriberId,
+    fetchSubscriberStats
+  )
+  const statsData = await subscriberStats.getSubscriberStatusData()
 
   return (
     <div className="grid gap-3 md:grid-cols-3">
