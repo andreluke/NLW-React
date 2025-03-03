@@ -1,16 +1,19 @@
 import type { Config } from 'jest'
+import nextJest from 'next/jest.js'
 
+const createJestConfig = nextJest({
+  dir: './',
+})
+
+// Add any custom config to be passed to Jest
 const config: Config = {
+  coverageProvider: 'v8',
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  transform: {
-    '^.+\\.(ts|tsx|js|jsx)?$': 'ts-jest', // Removido `useESM: true`
-  },
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.svg$': 'identity-obj-proxy',
   },
 }
 
-export default config
+export default createJestConfig(config)
