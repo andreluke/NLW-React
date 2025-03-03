@@ -1,9 +1,9 @@
 import { RankingItem } from '@/components'
-import { getRanking } from '@/http/api'
 import { positionMedals } from '@/tools'
+import type { RankingProps } from '@/types'
 
-export async function Ranking() {
-  const { ranking } = await getRanking()
+export async function Ranking({ rankingOrder }: RankingProps) {
+  const { ranking } = await rankingOrder.getRanking()
 
   return (
     <div className="w-full max-w-[400px] space-y-5">

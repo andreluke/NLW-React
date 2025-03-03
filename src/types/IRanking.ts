@@ -1,3 +1,4 @@
+import type { RankingOrder } from '@/class'
 import type { ComponentProps } from 'react'
 
 interface IRanking extends ComponentProps<'div'> {
@@ -6,4 +7,8 @@ interface IRanking extends ComponentProps<'div'> {
   medal: string
 }
 
-export type { IRanking }
+interface RankingProps {
+  rankingOrder: RankingOrder
+}
+
+export type { IRanking, RankingProps }

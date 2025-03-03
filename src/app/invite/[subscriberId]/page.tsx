@@ -1,19 +1,24 @@
 import logo from '@/assets/logo.svg'
+import { RankingOrder, SubscriberStats } from '@/class'
+import { fetchSubscriberStats } from '@/functions'
+import { getRanking } from '@/http/api'
+import type { InvitePageProps } from '@/types'
 import Image from 'next/image'
 import { InviteLinkInput } from './invite-link-input'
 import { Ranking } from './ranking'
 import { Status } from './status'
 
-interface InvitePageProps {
-  params: Promise<{
-    subscriberId: string
-  }>
-}
-
 export default async function InvitePage(props: InvitePageProps) {
   const { subscriberId } = await props.params
 
   const inviteLink = `http://localhost:3333/invites/${subscriberId}`
+
+  const subscriberStats = new SubscriberStats(
+    subscriberId,
+    fetchSubscriberStats
+  )
+
+  const rankingOrder = new RankingOrder(getRanking)
 
   return (
     <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
@@ -43,10 +48,10 @@ export default async function InvitePage(props: InvitePageProps) {
 
           <InviteLinkInput inviteLink={inviteLink} />
 
-          <Status subscriberId={subscriberId} />
+          <Status subscriberStats={subscriberStats} />
         </div>
       </div>
-      <Ranking />
+      <Ranking rankingOrder={rankingOrder} />
     </div>
   )
 }

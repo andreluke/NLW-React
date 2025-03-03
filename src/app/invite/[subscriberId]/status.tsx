@@ -1,13 +1,7 @@
-import { SubscriberStats } from '@/class'
 import { StatusItem } from '@/components'
-import { fetchSubscriberStats } from '@/functions'
 import type { StatusProps } from '@/types'
 
-export async function Status({ subscriberId }: StatusProps) {
-  const subscriberStats = new SubscriberStats(
-    subscriberId,
-    fetchSubscriberStats
-  )
+export async function Status({ subscriberStats }: StatusProps) {
   const statsData = await subscriberStats.getSubscriberStatusData()
 
   return (

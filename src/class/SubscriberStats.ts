@@ -1,7 +1,5 @@
-import type { StatusData, StatusDataProps } from '@/types'
+import type { FetchStatsFunction, StatusData, StatusDataProps } from '@/types'
 import { BadgeCheck, Medal, MousePointerClick } from 'lucide-react'
-
-type FetchStatsFunction = (subscriberId: string) => Promise<StatusDataProps>
 
 export class SubscriberStats {
   private fetchStatsFn: FetchStatsFunction

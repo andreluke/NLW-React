@@ -1,3 +1,5 @@
+import type { SubscriberStats } from '@/class'
+import type { GetRanking200 } from '@/http/api'
 import type { LucideProps } from 'lucide-react'
 import type {
   ComponentProps,
@@ -30,7 +32,19 @@ interface StatusDataProps {
 }
 
 interface StatusProps {
-  subscriberId: string
+  // subscriberId: string
+  subscriberStats: SubscriberStats
 }
 
-export type { StatusProps, StatusComponentProps, StatusData, StatusDataProps }
+type FetchStatsFunction = (subscriberId: string) => Promise<StatusDataProps>
+
+type FetchRanking = () => Promise<GetRanking200>
+
+export type {
+  StatusProps,
+  StatusComponentProps,
+  StatusData,
+  StatusDataProps,
+  FetchStatsFunction,
+  FetchRanking,
+}
