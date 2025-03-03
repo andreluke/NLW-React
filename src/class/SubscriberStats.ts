@@ -10,6 +10,8 @@ export class SubscriberStats {
     this.fetchStatsFn = fetchStatsFn
   }
 
+  // teste rápido
+
   async getSubscriberStatusData(): Promise<StatusData[]> {
     const stats = await this.fetchStatsFn(this.subscriberId)
     return this.createStatusData(stats)
