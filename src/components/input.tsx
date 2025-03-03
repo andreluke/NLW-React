@@ -1,4 +1,4 @@
-import type { InputFieldProps, InputIconProps, InputRootProps } from '@/types'
+import type { InputFieldProps, InputIconProps, InputRootProps } from '@/@types'
 
 export function InputRoot({ error = false, ...props }: InputRootProps) {
   return (

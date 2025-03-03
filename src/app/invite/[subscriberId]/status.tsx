@@ -1,5 +1,5 @@
+import type { StatusProps } from '@/@types'
 import { StatusItem } from '@/components'
-import type { StatusProps } from '@/types'
 
 export async function Status({ subscriberStats }: StatusProps) {
   const statsData = await subscriberStats.getSubscriberStatusData()

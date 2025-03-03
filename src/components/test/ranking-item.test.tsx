@@ -1,5 +1,5 @@
+import type { IRanking } from '@/@types'
 import { positionRanking, rankingMedals, translateMedal } from '@/tools'
-import type { IRanking } from '@/types'
 import { render, screen } from '@testing-library/react'
 import type { JSX } from 'react'
 import { RankingItem } from '../ranking-item'

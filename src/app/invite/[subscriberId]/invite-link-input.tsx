@@ -1,7 +1,7 @@
 'use client'
 
+import type { InviteLinkInputProps } from '@/@types'
 import { IconButton, InputField, InputIcon, InputRoot } from '@/components'
-import type { InviteLinkInputProps } from '@/types'
 import { Copy, Link } from 'lucide-react'
 
 export function InviteLinkInput({ inviteLink }: InviteLinkInputProps) {

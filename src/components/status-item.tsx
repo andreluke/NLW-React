@@ -1,4 +1,4 @@
-import type { StatusComponentProps } from '@/types'
+import type { StatusComponentProps } from '@/@types'
 
 export function StatusItem({
   icon: Icon,

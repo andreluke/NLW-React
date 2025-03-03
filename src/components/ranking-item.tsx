@@ -1,5 +1,5 @@
+import type { IRanking } from '@/@types'
 import { positionRanking, rankingMedals, translateMedal } from '@/tools'
-import type { IRanking } from '@/types'
 import Image from 'next/image'
 
 export function RankingItem({ medal, name, score, ...props }: IRanking) {

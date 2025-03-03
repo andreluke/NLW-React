@@ -1,9 +1,9 @@
+import type { StatusDataProps } from '@/@types'
 import {
   getSubscriberInviteClicks,
   getSubscriberInviteCount,
   getSubscriberRankingPosition,
 } from '@/http/api'
-import type { StatusDataProps } from '@/types'
 
 export async function fetchSubscriberStats(
   subscriberId: string

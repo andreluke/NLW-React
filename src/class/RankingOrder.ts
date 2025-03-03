@@ -1,5 +1,5 @@
+import type { FetchRanking } from '@/@types'
 import type { GetRanking200 } from '@/http/api'
-import type { FetchRanking } from '@/types'
 
 export class RankingOrder {
   private fetchRankingFn: FetchRanking

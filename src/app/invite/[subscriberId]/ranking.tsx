@@ -1,6 +1,6 @@
+import type { RankingProps } from '@/@types'
 import { RankingItem } from '@/components'
 import { positionMedals } from '@/tools'
-import type { RankingProps } from '@/types'
 
 export async function Ranking({ rankingOrder }: RankingProps) {
   const { ranking } = await rankingOrder.getRanking()

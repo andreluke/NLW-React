@@ -1,4 +1,4 @@
-import type { IconButtonProps } from '@/types'
+import type { IconButtonProps } from '@/@types'
 import { twMerge } from 'tailwind-merge'
 
 export function IconButton({ className, ...props }: IconButtonProps) {
