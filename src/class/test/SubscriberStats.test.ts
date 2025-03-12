@@ -1,7 +1,8 @@
+import type { FetchStatsFunction } from '@/@types'
 import { SubscriberStats } from '../SubscriberStats'
 
 test('Deve retornar os status formatados corretamente', async () => {
-  const mockFetchStats = async () => ({
+  const mockFetchStats: FetchStatsFunction = async () => ({
     accessCount: 10,
     inviteCount: 5,
     rankingPosition: 2,
