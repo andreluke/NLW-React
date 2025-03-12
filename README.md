@@ -1,34 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WebNLW - Front-End para Inscrições em Eventos
 
-## Getting Started
+Este é o front-end desenvolvido com **Next.js 15**, **React 19** e **Tailwind CSS** para interagir com a API de inscrições em eventos. A aplicação permite o registro de participantes, exibição de rankings e acompanhamento de convites.
 
-First, run the development server:
+## 📁 Estrutura do Projeto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+web/
+├─ .github/workflows/         # Configuração de CI/CD
+├─ .next/                     # Arquivos de build do Next.js
+├─ .swc/plugins/              # Plugins do compilador SWC
+├─ .vscode/                   # Configurações do VS Code
+├─ public/                    # Arquivos estáticos
+├─ src/
+│  ├─ @types/                 # Definição de tipos TypeScript
+│  ├─ app/                    # Estrutura de páginas do Next.js
+│  ├─ assets/                 # Imagens e ícones
+│  ├─ class/                  # Classes utilitárias
+│  ├─ components/             # Componentes reutilizáveis
+│  ├─ functions/              # Funções auxiliares
+│  ├─ http/                   # Configuração da API
+│  ├─ schemas/                # Schemas de validação com Zod
+│  ├─ tools/                  # Funções auxiliares
+│  └─ declarations.d.ts       # Declarações globais TypeScript
+├─ .gitignore                 # Arquivo de exclusão do Git
+├─ biome.json                 # Configuração do Biome
+├─ jest.config.ts             # Configuração do Jest
+├─ jest.setup.ts              # Configuração de ambiente de testes
+├─ next-env.d.ts              # Definições para Next.js
+├─ next.config.ts             # Configuração do Next.js
+├─ orval.config.ts            # Configuração do Orval
+├─ package.json               # Dependências do projeto
+├─ tailwind.config.ts         # Configuração do Tailwind CSS
+└─ tsconfig.json              # Configuração do TypeScript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 15**: Framework React para aplicações server-side rendering e static generation.
+- **React 19**: Biblioteca para construção da interface.
+- **Tailwind CSS 4**: Framework de estilização baseado em utilitários.
+- **React Hook Form**: Gerenciamento de formulários.
+- **Zod**: Validação de dados.
+- **Jest**: Testes automatizados.
 
-## Learn More
+## ⚙️ Instalação e Configuração
 
-To learn more about Next.js, take a look at the following resources:
+### Pré-requisitos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Node.js](https://nodejs.org/) instalado
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Passos para Rodar o Projeto
 
-## Deploy on Vercel
+1. Clone o repositório:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```sh
+   git clone https://github.com/andreluke/NLW-React
+   cd NLW-React
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Instale as dependências:
+
+   ```sh
+   npm install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+
+   ```sh
+   npm run dev
+   ```
+
+4. Acesse a aplicação:
+   - A aplicação estará disponível em `http://localhost:3000`
+
+## 🛠️ Comandos Disponíveis
+
+| Comando            | Descrição                                    |
+|--------------------|----------------------------------------------|
+| `npm run dev`     | Inicia o servidor em modo desenvolvimento    |
+| `npm run build`   | Compila o código para produção               |
+| `npm run start`   | Inicia o servidor em produção                |
+| `npm run lint`    | Executa a verificação de código com o Biome  |
+| `npm run test`    | Executa os testes automatizados              |
+
+## 🧪 Testes
+
+Os testes utilizam **Jest** e estão localizados nos diretórios `src/class/test/` e `src/components/test/`. Para executá-los, utilize:
+
+```sh
+npm run test
+```
+
+## 📸 Prints
+
+### Página Inicial
+
+![Home](./public/landing.png)
+
+### Página de Convites
+
+![Invite](./public/ranking.png)
+
+## 📜 Licença
+
+Este projeto está sob a licença **ISC**.
+
+---
+
+🚀 **Desenvolvido com Next.js e Tailwind CSS para uma interface moderna e eficiente!**
