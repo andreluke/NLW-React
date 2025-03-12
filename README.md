@@ -1,4 +1,4 @@
-# WebNLW - Front-End para Inscrições em Eventos
+# NLW Connect - Front-End para Inscrições em Eventos
 
 Este é o front-end desenvolvido com **Next.js 15**, **React 19** e **Tailwind CSS** para interagir com a API de inscrições em eventos. A aplicação permite o registro de participantes, exibição de rankings e acompanhamento de convites.
 
